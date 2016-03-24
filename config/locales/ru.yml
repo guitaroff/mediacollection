@@ -18,8 +18,20 @@ ru:
   user:
     not_found: 'Юзер не найден'
     profile: 'Мой профиль'
-    gallery: 'Галерея'
+    gallery: 'Галерея:'
+    videos: 'Видео:'
 
   form:
     save_button: 'Сохранить'
     new_image_button: 'Добавить фотографии'
+    find_error: 'Запись не найдена'
+
+  activerecord:
+    models:
+      video: 'Видео'
+    errors:
+      models:
+        video:
+          attributes:
+            link:
+              invalid: 'Проверьте формат(только youtube)'

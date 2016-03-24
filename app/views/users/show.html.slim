@@ -1,10 +1,32 @@
-.pictures-title
-  =< t('user.gallery')
-.pictures
-  - @pictures.each do |picture|
-      = link_to picture, target: '_blank' do
-        = image_tag picture.image.normal.url
-        = link_to picture, method: :delete do
-          span class='glyphicon glyphicon-remove'
-  .new-picture
-    = link_to t('form.new_image_button'), new_picture_path
+.row
+  .col-sm-12
+    .pictures-title
+      =< t('user.gallery')
+    .pictures
+      - if @pictures.present?
+        - @pictures.each do |picture|
+            = link_to picture, target: '_blank' do
+              = image_tag picture.image.normal.url
+              = link_to picture, method: :delete do
+                span class='glyphicon glyphicon-remove'
+      .new-picture
+        = link_to t('form.new_image_button'), new_picture_path
+
+
+.row
+  .col-sm-12
+    .videos-title
+      =< t('user.videos')
+    .videos
+      - if @videos.present?
+        - @videos.each do |yt|
+          = raw YouTubeAddy.youtube_embed_url(yt.link,240,180)
+          = link_to yt, method: :delete do
+            span class='glyphicon glyphicon-remove'
+
+.row
+  .col-sm-4
+    .videos
+      = simple_form_for @video, url: url_for(controller: 'videos', action: 'create'), method: 'post' do |v|
+        = v.input :link
+        = v.button :submit, t('form.save_button')

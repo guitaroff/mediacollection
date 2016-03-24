@@ -19,6 +19,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'youtube_addy'
 
 group :development do
   gem 'letter_opener'

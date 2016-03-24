@@ -3,7 +3,9 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def show
-    @pictures = current_user.pictures
+    @pictures = @user.pictures.all
+    @videos = @user.videos.all
+    @video = @user.videos.build
   end
 
   private
