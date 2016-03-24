@@ -9,3 +9,17 @@ ru:
     login: 'Вход'
     logout: 'Выход'
     signup: 'Регистрация'
+
+  picture:
+    not_found: 'Картинка не найдена'
+    all: 'Картинки'
+    create_header: 'Добавление картинок'
+
+  user:
+    not_found: 'Юзер не найден'
+    profile: 'Мой профиль'
+    gallery: 'Галерея'
+
+  form:
+    save_button: 'Сохранить'
+    new_image_button: 'Добавить фотографии'

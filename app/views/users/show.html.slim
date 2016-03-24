@@ -1,0 +1,10 @@
+.pictures-title
+  =< t('user.gallery')
+.pictures
+  - @pictures.each do |picture|
+      = link_to picture, target: '_blank' do
+        = image_tag picture.image.normal.url
+        = link_to picture, method: :delete do
+          span class='glyphicon glyphicon-remove'
+  .new-picture
+    = link_to t('form.new_image_button'), new_picture_path

@@ -1,1 +1,4 @@
 h2 = t('home.title')
+- if user_signed_in?
+  .profile
+    = link_to t('user.profile'), user_path(current_user)
