@@ -1,0 +1,11 @@
+ru:
+  home:
+    title: 'Главная страница'
+
+  menu:
+    title: 'Медиаколлекция'
+    home: 'Главная'
+    edit_profile: 'Настройки'
+    login: 'Вход'
+    logout: 'Выход'
+    signup: 'Регистрация'
