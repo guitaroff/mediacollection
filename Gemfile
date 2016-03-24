@@ -17,6 +17,8 @@ gem 'therubyracer', platforms: :ruby
 gem 'slim-rails'
 gem 'simple_form'
 gem 'devise'
+gem 'carrierwave'
+gem 'rmagick'
 
 group :development do
   gem 'letter_opener'
