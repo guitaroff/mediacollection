@@ -13,7 +13,6 @@ ru:
   picture:
     not_found: 'Картинка не найдена'
     all: 'Картинки'
-    create_header: 'Добавление картинок'
 
   user:
     not_found: 'Юзер не найден'
@@ -39,6 +38,7 @@ ru:
           attributes:
             link:
               invalid: 'Проверьте формат(только youtube)'
+              blank: 'Добавьте ссылку на видео(только youtube)'
         song:
           attributes:
             title:

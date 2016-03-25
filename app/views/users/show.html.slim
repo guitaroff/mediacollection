@@ -10,7 +10,9 @@
               = link_to picture, method: :delete do
                 span class='glyphicon glyphicon-remove'
       .new-picture
-        = link_to t('form.new_image_button'), new_picture_path
+        = simple_form_for @picture, url: url_for(controller: 'pictures', action: 'create'), method: 'post', html: { multipart: true } do |f|
+          = f.input :image
+          = f.button :submit, t('form.new_image_button')
 
 
 .row

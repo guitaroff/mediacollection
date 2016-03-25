@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @pictures = @user.pictures.all
+    @picture = @user.pictures.build
     @videos = @user.videos.all
     @video = @user.videos.build
     @songs = @user.songs.all

@@ -2,10 +2,6 @@ class PicturesController < ApplicationController
   before_action :set_picture!, only: [:show, :destroy]
   before_action :authenticate_user!
 
-  def new
-    @picture = Picture.new
-  end
-
   def create
     @picture = current_user.pictures.build(picture_params)
     if @picture.save

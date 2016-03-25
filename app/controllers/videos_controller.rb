@@ -8,8 +8,10 @@ class VideosController < ApplicationController
       redirect_to user_path(current_user)
     else
       @pictures = current_user.pictures.all
+      @picture = current_user.pictures.build
       @videos = current_user.videos.all
       @songs = current_user.songs.all
+      @song = current_user.songs.build
       render 'users/show'
     end
   end

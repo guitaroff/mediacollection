@@ -8,6 +8,7 @@ class SongsController < ApplicationController
       redirect_to user_path(current_user)
     else
       @pictures = current_user.pictures.all
+      @picture = current_user.pictures.build
       @videos = current_user.videos.all
       @video = current_user.videos.build
       @songs = current_user.songs.all
