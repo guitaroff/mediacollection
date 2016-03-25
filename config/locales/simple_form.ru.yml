@@ -1,0 +1,8 @@
+ru:
+  simple_form:
+    labels:
+      video:
+        link: 'Добавить видео(youtube)'
+      song:
+        title: 'Название композиции'
+        link: 'Ссылка на композицию(soundcloud)'

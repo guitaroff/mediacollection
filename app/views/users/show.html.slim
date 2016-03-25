@@ -1,0 +1,61 @@
+.row
+  .col-sm-12
+    .pictures-title
+      =< t('user.gallery')
+    .pictures
+      - if @pictures.present?
+        - @pictures.each do |picture|
+            = link_to picture, target: '_blank' do
+              = image_tag picture.image.normal.url
+              = link_to picture, method: :delete do
+                span class='glyphicon glyphicon-remove'
+      .new-picture
+        = simple_form_for @picture, url: url_for(controller: 'pictures', action: 'create'), method: 'post', html: { multipart: true } do |f|
+          = f.input :image
+          = f.button :submit, t('form.new_image_button')
+
+
+.row
+  .col-sm-12
+    .videos-title
+      =< t('user.videos')
+    .videos
+      - if @videos.present?
+        - @videos.each do |yt|
+          = raw YouTubeAddy.youtube_embed_url(yt.link,240,180)
+          = link_to yt, method: :delete do
+            span class='glyphicon glyphicon-remove'
+
+.row
+  .col-sm-4
+    .videos
+      = simple_form_for @video, url: url_for(controller: 'videos', action: 'create'), method: 'post' do |v|
+        = v.input :link
+        = v.button :submit, t('form.add_button')
+
+.row
+  .col-sm-12
+    .music-title
+      =< t('user.music')
+    .music
+      - if @songs.present?
+        - @songs.each do |song|
+          .song
+            = link_to song.title, song.link, target: '_blank'
+            = link_to song, method: :delete do
+              span class='glyphicon glyphicon-remove'
+
+.row
+  .col-sm-4
+    .new-song
+      = simple_form_for @song, url: url_for(controller: 'songs', action: 'create'), method: 'post' do |song|
+        = song.input :title
+        = song.input :link
+        = song.button :submit, t('form.add_button')
+
+.row
+  .col-sm-12
+    .social-title
+      =< t('user.social')
+    .social
+      = social_share_button_tag()

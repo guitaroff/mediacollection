@@ -1,0 +1,47 @@
+ru:
+  home:
+    title: 'Главная страница'
+
+  menu:
+    title: 'Медиаколлекция'
+    home: 'Главная'
+    edit_profile: 'Настройки'
+    login: 'Вход'
+    logout: 'Выход'
+    signup: 'Регистрация'
+
+  picture:
+    not_found: 'Картинка не найдена'
+    all: 'Картинки'
+
+  user:
+    not_found: 'Юзер не найден'
+    profile: 'Мой профиль'
+    gallery: 'Галерея:'
+    videos: 'Видео:'
+    music: 'Музыка:'
+    sound_link_error: 'Поддерживаемый формат - soundcloud'
+    social: 'Поделиться коллекцией'
+
+  form:
+    save_button: 'Сохранить'
+    add_button: 'Добавить'
+    new_image_button: 'Добавить фотографии'
+    find_error: 'Запись не найдена'
+
+  activerecord:
+    models:
+      video: 'Видео'
+    errors:
+      models:
+        video:
+          attributes:
+            link:
+              invalid: 'Проверьте формат(только youtube)'
+              blank: 'Добавьте ссылку на видео(только youtube)'
+        song:
+          attributes:
+            title:
+              blank: 'Название композиции'
+            link:
+              blank: 'Ссылка на композицию'

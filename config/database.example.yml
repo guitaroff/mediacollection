@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: mediacollection_development
+  username: your_name
+  password: your_password
+
+production:
+  <<: *default
+  database: mediacollection_production
+
+test:
+  <<: *default
+  database: mediacollection_test
+  username: your_name
+  password: your_password
