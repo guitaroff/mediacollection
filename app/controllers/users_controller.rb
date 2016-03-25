@@ -6,6 +6,8 @@ class UsersController < ApplicationController
     @pictures = @user.pictures.all
     @videos = @user.videos.all
     @video = @user.videos.build
+    @songs = @user.songs.all
+    @song = @user.songs.build
   end
 
   private

@@ -20,9 +20,12 @@ ru:
     profile: 'Мой профиль'
     gallery: 'Галерея:'
     videos: 'Видео:'
+    music: 'Музыка:'
+    sound_link_error: 'Поддерживаемый формат - soundcloud'
 
   form:
     save_button: 'Сохранить'
+    add_button: 'Добавить'
     new_image_button: 'Добавить фотографии'
     find_error: 'Запись не найдена'
 
@@ -35,3 +38,9 @@ ru:
           attributes:
             link:
               invalid: 'Проверьте формат(только youtube)'
+        song:
+          attributes:
+            title:
+              blank: 'Название композиции'
+            link:
+              blank: 'Ссылка на композицию'

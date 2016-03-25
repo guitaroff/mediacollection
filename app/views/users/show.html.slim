@@ -29,4 +29,24 @@
     .videos
       = simple_form_for @video, url: url_for(controller: 'videos', action: 'create'), method: 'post' do |v|
         = v.input :link
-        = v.button :submit, t('form.save_button')
+        = v.button :submit, t('form.add_button')
+
+.row
+  .col-sm-12
+    .music-title
+      =< t('user.music')
+    .music
+      - if @songs.present?
+        - @songs.each do |song|
+          .song
+            = link_to song.title, song.link, target: '_blank'
+            = link_to song, method: :delete do
+              span class='glyphicon glyphicon-remove'
+
+.row
+  .col-sm-4
+    .new-song
+      = simple_form_for @song, url: url_for(controller: 'songs', action: 'create'), method: 'post' do |song|
+        = song.input :title
+        = song.input :link
+        = song.button :submit, t('form.add_button')
