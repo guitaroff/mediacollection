@@ -7,7 +7,7 @@ class PicturesController < ApplicationController
     if @picture.save
       redirect_to user_path(current_user)
     else
-      render :new
+      render 'users/show'
     end
   end
 
