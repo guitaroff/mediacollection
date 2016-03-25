@@ -20,6 +20,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'youtube_addy'
+gem 'social-share-button'
 
 group :development do
   gem 'letter_opener'

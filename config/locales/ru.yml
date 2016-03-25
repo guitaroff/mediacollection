@@ -22,6 +22,7 @@ ru:
     videos: 'Видео:'
     music: 'Музыка:'
     sound_link_error: 'Поддерживаемый формат - soundcloud'
+    social: 'Поделиться коллекцией'
 
   form:
     save_button: 'Сохранить'

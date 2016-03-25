@@ -50,3 +50,10 @@
         = song.input :title
         = song.input :link
         = song.button :submit, t('form.add_button')
+
+.row
+  .col-sm-12
+    .social-title
+      =< t('user.social')
+    .social
+      = social_share_button_tag()
